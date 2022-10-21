@@ -168,7 +168,7 @@
         startTimer = setInterval(() => {
           sec.textContent = `あと${count}びょう`;
           count--;
-          timeLeft.style.width = `${count * 10}%`;
+          timeLeft.style.width = `${(count + 1) * 10}%`;
           if (count < 0) {
           sec.textContent = 'じかんぎれ...';
           checkAnswer();
