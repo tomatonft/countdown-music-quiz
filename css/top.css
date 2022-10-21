@@ -1,0 +1,280 @@
+/* Top用 */
+/* small screen */
+
+.container h1:nth-child(2) {
+  margin-top: 8px;
+}
+
+.levels-inner {
+  margin-top: 64px;
+}
+
+.levels-circle {
+  margin: 0 auto;
+  width: 240px;
+  height: 240px;
+  background-color: #153692;
+  border-radius: 50%;
+}
+
+.levels-circle-inner {
+  margin: 0 auto;
+  width: 236px;
+  height: 236px;
+  background-color: #fff;
+  border-radius: 50%;
+  transform: translateY(2px);
+  position: relative;
+}
+
+a {
+  color: #fed500;
+  background-color: #00a0e8;
+  padding: 8px;
+  border-radius: 8px;
+  position: absolute;
+  transition: all .4s;
+}
+
+a:hover {
+  background-color: #67c2ec;
+}
+
+.level-1 {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.level-1:hover,
+.level-2:hover  {
+  animation: level-1-move .5s infinite;
+}
+
+@keyframes level-1-move {
+  0% {
+    transform: translateX(-50%) translateY(-50%);
+  }
+  25% {
+    transform: translateX(-50%) translateY(-50%) rotate(8deg);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-50%) translate(0);
+  }
+  75% {
+    transform: translateX(-50%) translateY(-50%) rotate(-8deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+.level-2 {
+  top: 50%;
+  left: 0;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.level-3 {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(50%);
+}
+
+.level-3:hover {
+  animation: level-3-move .5s infinite;
+}
+
+@keyframes level-3-move {
+  0% {
+    transform: translateX(-50%) translateY(50%);
+  }
+  25% {
+    transform: translateX(-50%) translateY(50%) rotate(8deg);
+  }
+  50% {
+    transform: translateX(-50%) translateY(50%) translate(0);
+  }
+  75% {
+    transform: translateX(-50%) translateY(50%) rotate(-8deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(50%);
+  }
+}
+
+.level-4 {
+  top: 50%;
+  right: 0;
+  transform: translateX(50%) translateY(-50%);
+}
+
+.level-4:hover {
+  animation: level-4-move .5s infinite;
+}
+
+@keyframes level-4-move {
+  0% {
+    transform: translateX(50%) translateY(-50%);
+  }
+  25% {
+    transform: translateX(50%) translateY(-50%) rotate(8deg);
+  }
+  50% {
+    transform: translateX(50%) translateY(-50%) translate(0);
+  }
+  75% {
+    transform: translateX(50%) translateY(-50%) rotate(-8deg);
+  }
+  100% {
+    transform: translateX(50%) translateY(-50%);
+  }
+}
+
+.mark-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 0;
+}
+
+.mark-circle p {
+  font-size: 40px;
+  line-height: 80px;
+  text-align: center;
+}
+
+.question {
+  background-color: #fed500;
+  color: #DE6C31;
+  animation: fade 3s infinite;
+}
+
+.exclamation {
+  background-color: #EA6088;
+  color: #153692;
+  animation: fade 3s 1.5s infinite;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  12.5% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  37.5% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+img {
+  height: 80px;
+  opacity: 0.4;
+  position: absolute;
+}
+
+.note-img-1 {
+  opacity: 0;
+  transform: rotate(20deg);
+  animation: open-1 2s forwards;
+}
+
+.note-img-2 {
+  opacity: 0;
+  transform: rotate(-8deg);
+  animation: open-2 2s forwards;
+}
+
+.note-img-3 {
+  opacity: 0;
+  transform: rotate(8deg);
+  animation: open-3 2s forwards;
+}
+
+@keyframes open-1 {
+  0% {
+    opacity: 0;
+    top: 100px;
+    right: 46px;
+  }
+  
+  100% {
+    opacity: 0.5;
+    top: 70px;
+    right: 18px;
+  }
+}
+
+@keyframes open-2 {
+  0% {
+    opacity: 0;
+    top: 320px;
+    left: 46px;
+  }
+  
+  100% {
+    opacity: 0.5;
+    top: 350px;
+    left: 16px;
+  }
+}
+
+@keyframes open-3 {
+  0% {
+    opacity: 0;
+    top: 320px;
+    right: 46px;
+  }
+  
+  100% {
+    opacity: 0.5;
+    top: 350px;
+    right: 16px;
+  }
+}
+
+/* --------------------------
+  レスポンシブ  large screen
+-----------------------------*/
+@media screen and (min-width: 600px){
+
+  .levels-circle {
+    width: 360px;
+    height: 360px;
+  }
+  
+  .levels-circle-inner {
+    width: 356px;
+    height: 356px;
+  }
+
+  a {
+    font-size: 18px;
+  }
+
+  .mark-circle {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .mark-circle p {
+    font-size: 64px;
+    line-height: 120px;
+  }
+
+  img {
+    height: 120px;
+  }
+
+}

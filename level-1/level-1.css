@@ -1,0 +1,42 @@
+.container h1::before {
+  content: 'レベル 1';
+  width:fit-content;
+  height: fit-content;
+  font-size: 14px;
+  color: #fed500;
+  background-color: #00a0e8;
+  padding: 8px;
+  border-radius: 8px;
+  position: absolute;
+  top: -80%;
+  right: 50%;
+  transform: translateX(240px) translateY(-8px) rotate(16deg);
+}
+
+.container h1::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  right: -24%;
+  transform: rotate(20deg);
+  border: 8px solid transparent;
+  border-top: 12px solid #00a0e8;
+}
+
+/* --------------------------
+  レスポンシブ  small screen
+-----------------------------*/
+@media screen and (max-width: 599px){
+
+.container h1::before {
+  font-size: 14px;
+  transform: translateX(180px) translateY(-8px) rotate(16deg);
+}
+
+.container h1::after {
+  bottom: -10px;
+  right: -16%;
+  transform: rotate(16deg);
+}
+
+}
