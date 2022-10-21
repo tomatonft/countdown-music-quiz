@@ -241,7 +241,8 @@ main {
   color: #2660AC;
   padding: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  top: 50px;
+  /* top: 50px; */
+  top: 120px;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -472,7 +473,7 @@ footer small {
   
 
   #btn {
-    margin-top: 16px;
+    margin-top: 8px;
   }
 
   #remaining-numbers p {
