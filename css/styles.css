@@ -188,13 +188,19 @@ main {
   padding-bottom: 8px;
 }
 
-.time {
+#time {
   /* margin: 8px; */
   background-color: #00a0e8;
   color: #fed500;
   border-radius: 8px;
   padding: 8px;
   font-size: 14px;
+}
+
+#time.time-over {
+  /* background-color: #014d71; */
+  background-color: #2660AC;
+  color: #fed500;
 }
 
 .slider {

@@ -24,6 +24,7 @@
   const balloons = document.querySelectorAll('.balloons > i');
   const remainingNumbersCorrect = document.getElementById('remaining-numbers-correct');
   const remainingNumbersWrong = document.getElementById('remaining-numbers-wrong');
+  const time = document.getElementById('time');
 
   let vw = window.innerWidth;
 
@@ -163,6 +164,7 @@
     let startTimer;
     function countdown(){
         count = 10; //初期化
+        time.classList.remove('time-over');
         sec.textContent = `あと${count}びょう`;
         timeLeft.style.width = `${count * 10}%`;
         startTimer = setInterval(() => {
@@ -171,6 +173,7 @@
           timeLeft.style.width = `${(count + 1) * 10}%`;
           if (count < 0) {
           sec.textContent = 'じかんぎれ...';
+          time.classList.add('time-over');
           checkAnswer();
           // 引数を渡さないことで選択しないことを表現する
           }
