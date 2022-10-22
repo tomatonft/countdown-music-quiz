@@ -25,7 +25,7 @@
   const remainingNumbersCorrect = document.getElementById('remaining-numbers-correct');
   const remainingNumbersWrong = document.getElementById('remaining-numbers-wrong');
   const time = document.getElementById('time');
-
+  // const next = document.getElementById('next');
   let vw = window.innerWidth;
 
   const sec = document.getElementById("sec");
@@ -132,6 +132,7 @@
     if (currentNum === quizSet.length - 1 && score === quizSet.length) {
       
       celebration.classList.remove('hidden');
+      // next.textContent = '次のレベルにチャレンジ！';
       balloons.forEach(balloon => {
         balloon.classList.add('appear');
       });

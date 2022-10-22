@@ -139,7 +139,7 @@ a:hover {
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  opacity: 0;
+  /* opacity: 0; */
 }
 
 .mark-circle p {
@@ -151,14 +151,14 @@ a:hover {
 .question {
   background-color: #fed500;
   color: #DE6C31;
-  animation: fade 3s infinite;
+  /* animation: fade 3s infinite; */
 }
 
-.exclamation {
+/* .exclamation {
   background-color: #EA6088;
   color: #153692;
   animation: fade 3s 1.5s infinite;
-}
+} */
 
 @keyframes fade {
   0% {
