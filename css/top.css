@@ -225,7 +225,7 @@ img {
   max-width: 400px;
   width: calc(100% - 16px * 2);
   background: #fff;
-  padding: 24px;
+  padding: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   top: 120px;
   left: 0;
