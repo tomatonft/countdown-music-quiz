@@ -10,7 +10,7 @@
   }
   document.addEventListener('touchmove', disableScroll, { passive: false });
 
-  // クイズのコード
+  // クイズ
   const question = document.getElementById('question');
   const choices = document.getElementById('choices');
   const btn = document.getElementById('btn');
@@ -25,7 +25,6 @@
   const remainingNumbersCorrect = document.getElementById('remaining-numbers-correct');
   const remainingNumbersWrong = document.getElementById('remaining-numbers-wrong');
   const time = document.getElementById('time');
-  // const next = document.getElementById('next');
   let vw = window.innerWidth;
 
   const sec = document.getElementById("sec");
@@ -132,7 +131,6 @@
     if (currentNum === quizSet.length - 1 && score === quizSet.length) {
       
       celebration.classList.remove('hidden');
-      // next.textContent = '次のレベルにチャレンジ！';
       balloons.forEach(balloon => {
         balloon.classList.add('appear');
       });
@@ -181,7 +179,6 @@
         }, 1000);
       } 
   countdown();
-
 }
 
 

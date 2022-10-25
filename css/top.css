@@ -27,17 +27,19 @@
   position: relative;
 }
 
-a {
+.levels-circle-inner > span {
   color: #fed500;
   background-color: #00a0e8;
   padding: 8px;
   border-radius: 8px;
   position: absolute;
   transition: all .4s;
+  box-shadow: 4px 2px 2px rgba(0, 0, 0, 0.4);
 }
 
-a:hover {
+.levels-circle-inner > span:hover {
   background-color: #67c2ec;
+  cursor: pointer;
 }
 
 .level-1 {
@@ -139,7 +141,6 @@ a:hover {
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  /* opacity: 0; */
 }
 
 .mark-circle p {
@@ -151,31 +152,6 @@ a:hover {
 .question {
   background-color: #fed500;
   color: #DE6C31;
-  /* animation: fade 3s infinite; */
-}
-
-/* .exclamation {
-  background-color: #EA6088;
-  color: #153692;
-  animation: fade 3s 1.5s infinite;
-} */
-
-@keyframes fade {
-  0% {
-    opacity: 0;
-  }
-  12.5% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 1;
-  }
-  37.5% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
 }
 
 img {
@@ -244,6 +220,94 @@ img {
   }
 }
 
+#modal {
+  position: absolute;
+  max-width: 400px;
+  width: calc(100% - 16px * 2);
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  top: 120px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 4px;
+  text-align: center;
+  transition: 0.4s;
+  opacity: 1;
+  z-index: 10;
+}
+
+#modal.hidden {
+  transform: translateY(-600px);
+  opacity: 0;
+} 
+
+#modal p {
+  margin-bottom: 16px;
+}
+
+#modal-note {
+  position: static;
+  opacity: 1;
+  height: 120px;
+}
+
+.modal-btn {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.modal-btn span,
+.modal-btn a {
+  display: inline-block;
+  position: static;
+  width: 120px;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 4px 2px 2px rgba(0, 0, 0, 0.4);
+  transition: background-color .4s;
+}
+
+.modal-btn span:active,
+.modal-btn a:active {
+  transform: translateY(2px);
+}
+
+#modal-back {
+  background-color: #fed500;
+  color: #153692
+}
+
+#modal-back:hover {
+  background-color: #feba00;
+}
+
+#modal-start {
+  background-color: #EA6088;
+  color: #153692
+}
+
+#modal-start:hover {
+  background-color: #e62f63;
+}
+
+#mask {
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: block;
+}
+
+#mask.hidden {
+  display: none;
+}
 /* --------------------------
   レスポンシブ  large screen
 -----------------------------*/
