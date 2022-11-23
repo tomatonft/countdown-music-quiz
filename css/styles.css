@@ -167,16 +167,16 @@ main {
 }
 
 #choices > li.correct {
-  background: #f8b800;
-  color: #ea5419;
-  border-color: #ea5419;
+  background: #efa72b;
+  color: #de6c31;
+  border-color: #de6c31;
   font-weight: bold;
 }
 
 #choices > li.wrong {
-  background: #0DB8D9;
-  color: #2660AC;
-  border-color: #2660AC;
+  background: #00a0e8;
+  color: #153692;
+  border-color: #153692;
   font-weight: bold;
 }
 
@@ -221,7 +221,7 @@ main {
 #btn,
 #result > a,
 #celebration > a {
-  background: #c84283;
+  background: #ea6088;
   padding: 8px;
   border-radius: 4px;
   cursor: pointer;
@@ -231,7 +231,7 @@ main {
 }
 
 #btn.disabled {
-  background: #cd729e;
+  background: #f08ba8;
   box-shadow: 4px 2px 2px rgba(0, 0, 0, 0.4);
   opacity: 0.7;
 }
@@ -240,8 +240,8 @@ main {
   position: absolute;
   max-width: 400px;
   width: calc(100% - 16px * 2);
-  background: #ffe600;
-  color: #2660AC;
+  background: #fed500;
+  color: #153692;
   padding: 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   top: 120px;
@@ -306,11 +306,11 @@ main {
 }
 
 #correct-answer {
-  border: 16px solid #f8b800; 
+  border: 16px solid #efa72b; 
 }
 
 #wrong-answer {
-  border: 16px solid #0DB8D9; 
+  border: 16px solid #00a0e8; 
 }
 
 #correct-answer.hidden,
@@ -327,7 +327,7 @@ main {
 .outer-circle {
   width: 100px;
   height: 100px;
-  background-color: #ea5419;
+  background-color: #de6c31;
   border-radius: 50%;
   margin: 0 auto;
 }
@@ -344,7 +344,7 @@ main {
 .inner-circle {
   width: 60px;
   height: 60px;
-  background-color: #ea5419;
+  background-color: #de6c31;
   border-radius: 50%;
   margin: 0 auto;
   transform: translateY(10px);
@@ -369,7 +369,7 @@ main {
   display: block;
   width: 100px;
   height: 10px;
-  background-color: #2660AC;
+  background-color: #153692;
 }
 
 .cross span:first-child {
